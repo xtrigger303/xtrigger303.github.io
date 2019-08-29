@@ -6,5 +6,5 @@ trying to write some stuff here
 
 whatever
 
-[A link here](./second.html)
-[Another link to an md](./other.md)
+[A link here](./Hello1/emdist/foo.html)
+[Another link to an md](./Hello1/emdist/foo.html)
