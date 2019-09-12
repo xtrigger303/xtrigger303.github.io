@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:100&display=swap');
+
+* {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    background-color: rgb(32,32,32);
+    color: white
+}
+
+h1 {
+    font-size: 40pt
+}
+
+div.emscripten {
+    padding-right: 10%;
+    padding-left: 10%;
+    width: 80%;
+    height: auto;
+}
+
+/* the canvas *must not* have any border or padding, or mouse coords will be wrong */
+canvas.emscripten {
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+
+.spinner {
+    height: 50px;
+    width: 50px;
+    margin: 0px auto;
+    -webkit-animation: rotation .8s linear infinite;
+    -moz-animation: rotation .8s linear infinite;
+    -o-animation: rotation .8s linear infinite;
+    animation: rotation 0.8s linear infinite;
+    border-left: 10px solid rgb(0, 150, 240);
+    border-right: 10px solid rgb(0, 150, 240);
+    border-bottom: 10px solid rgb(0, 150, 240);
+    border-top: 10px solid rgb(100, 0, 200);
+    border-radius: 100%;
+    background-color: rgb(200, 100, 250);
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotation {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes rotation {
+    from {
+        -o-transform: rotate(0deg);
+    }
+
+    to {
+        -o-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

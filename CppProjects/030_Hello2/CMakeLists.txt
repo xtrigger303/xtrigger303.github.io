@@ -50,12 +50,11 @@ if( EMSCRIPTEN )
     target_compile_options( ${PROJECT_NAME}  PRIVATE -s USE_SDL=2 )
 
     # copy the html template and create dependency so that changing file will trigger relink
-    file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/src/${HTML_TEMPLATE} DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-    set_target_properties(${PROJECT_NAME} PROPERTIES LINK_DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${HTML_TEMPLATE})
+    set_target_properties(${PROJECT_NAME} PROPERTIES LINK_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/src/${HTML_TEMPLATE})
 
     # link options
     target_link_options( ${PROJECT_NAME}  PRIVATE -s USE_SDL=2 )
-    target_link_options( ${PROJECT_NAME}  PRIVATE --shell-file ${CMAKE_CURRENT_BINARY_DIR}/${HTML_TEMPLATE} )
+    target_link_options( ${PROJECT_NAME}  PRIVATE --shell-file ${CMAKE_CURRENT_SOURCE_DIR}/src/${HTML_TEMPLATE} )
 
     # tried target_link_options( ${PROJECT_NAME}  PRIVATE -o ${PROJECT_NAME}.html ) but did not work, the following works
     set(CMAKE_EXECUTABLE_SUFFIX ".html")
