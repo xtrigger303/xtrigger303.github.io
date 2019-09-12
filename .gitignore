@@ -1,3 +1,5 @@
 **/embuild
 **/build
 **/xcodebuild
+.sass-cache
+_site
